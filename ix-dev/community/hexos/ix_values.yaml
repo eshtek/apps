@@ -1,7 +1,7 @@
 images:
   image:
     repository: eshtek/hexos
-    tag: latest
+    tag: dev-jerod
 
 consts:
   hexos_container_name: hexos

@@ -11,6 +11,8 @@
 {% do c1.environment.add_env("HEXOS_INSTALL", "catalog") %}
 {% do c1.environment.add_env("HEXOS_IMAGE_TAG", values.images.image.tag) %}
 {% do c1.environment.add_env("LOG_LEVEL", "info") %}
+{% do c1.environment.add_env("MAIN_SERVER_URL", "dev-jerod.hexos.direct") %}
+{% do c1.environment.add_env("MAIN_DECK_URL", "http://localhost:3000") %}
 
 {% do c1.add_storage(values.consts.data_path, values.storage.data) %}
 {% do c1.add_docker_socket() %}
