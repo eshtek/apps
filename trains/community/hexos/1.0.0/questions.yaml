@@ -31,13 +31,24 @@ questions:
                   default: ix_volume
                   hidden: true
               - variable: ix_volume_config
-                label: ""
+                label: ixVolume Configuration
+                description: The configuration for the ixVolume dataset.
                 schema:
                   type: dict
+                  show_if: [["type", "=", "ix_volume"]]
+                  $ref:
+                    - "normalize/ix_volume"
                   attrs:
+                    - variable: acl_enable
+                      label: Enable ACL
+                      schema:
+                        type: boolean
+                        default: false
+                        hidden: true
                     - variable: dataset_name
                       label: Dataset Name
                       schema:
                         type: string
-                        default: hexos_data
+                        required: true
                         hidden: true
+                        default: hexos_data
